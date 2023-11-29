@@ -1,0 +1,22 @@
+{
+  "name": "vite-plugin-mp-weixin-publish",
+  "version": "1.0.0",
+  "description": "打包后自动发布微信小程序的vite插件",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spirits001/vite-plugin-mp-weixin-publish.git"
+  },
+  "keywords": [
+    "vite"
+  ],
+  "author": "代码厨子",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/spirits001/vite-plugin-mp-weixin-publish/issues"
+  },
+  "homepage": "https://github.com/spirits001/vite-plugin-mp-weixin-publish#readme"
+}

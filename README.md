@@ -26,16 +26,23 @@ const options = {
 
 ## 用法
 
-在 vite.config.js 中注册本插件
+在 vite.config.ts 中注册本插件
 
 ```javascript
 import { defineConfig } from 'vite'
 import vitePluginMpWeixinPublish from 'vite-plugin-mp-weixin-publish'
+import { Options } from "vite-plugin-mp-weixin-publish";
 
-const options = {
+const options: Options = {
     appid: '<Your Appid>',
     privateKeyPath: '<Your PrivateKey Path>',
-    version: '<Your Version>'
+    version: '<Your Version>',
+    setting: {
+      minifyJS: true,
+      minifyWXML: true,
+      minifyWXSS: true,
+      minify: true,
+    },
 }
 
 export default defineConfig({
@@ -43,4 +50,4 @@ export default defineConfig({
 })
 ```
 
-最后build的时候，将自动上传
+最后build的时候，将自动上传代码到微信小程序

@@ -3,20 +3,39 @@
   "version": "1.0.0",
   "description": "打包后自动发布微信小程序的vite插件",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "release": "tsc && npm publish"
   },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/spirits001/vite-plugin-mp-weixin-publish.git"
   },
   "keywords": [
-    "vite"
+    "vite",
+    "ts",
+    "javascript",
+    "typescript",
+    "js",
+    "ts",
+    "微信小程序"
   ],
   "author": "代码厨子",
   "license": "MIT",
+  "private": false,
   "bugs": {
     "url": "https://github.com/spirits001/vite-plugin-mp-weixin-publish/issues"
   },
-  "homepage": "https://github.com/spirits001/vite-plugin-mp-weixin-publish#readme"
+  "homepage": "https://github.com/spirits001/vite-plugin-mp-weixin-publish#readme",
+  "dependencies": {
+    "miniprogram-ci": "^1.9.8",
+    "vite": "^4.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0"
+  }
 }

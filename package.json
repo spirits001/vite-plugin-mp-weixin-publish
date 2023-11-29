@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-mp-weixin-publish",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "打包后自动发布微信小程序的vite插件",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

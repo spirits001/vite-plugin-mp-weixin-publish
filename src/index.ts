@@ -1,14 +1,24 @@
 import path from "path";
 import { normalizePath } from "vite";
 
-interface Option {
+export interface Setting {
+  es6?: boolean;
+  es7?: boolean;
+  minifyJS?: boolean;
+  minifyWXML?: boolean;
+  minifyWXSS?: boolean;
+  minify?: boolean;
+  codeProtect?: boolean;
+  autoPrefixWXSS?: boolean;
+}
+export interface Options {
   appid: string;
   privateKeyPath: string;
   version: string;
   type?: "miniProgram" | "miniProgramPlugin" | "miniGame" | "miniGamePlugin";
   ignores?: string[];
   desc?: string;
-  setting?: any;
+  setting?: Setting;
 }
 
 interface PluginRes {
@@ -19,7 +29,7 @@ interface PluginRes {
   closeBundle(): Promise<void>;
 }
 
-export default function vitePluginMpWeixinPublish(options: Option): PluginRes | undefined {
+export default function vitePluginMpWeixinPublish(options: Options): PluginRes | undefined {
   let basePath = "/";
   let buildConfig: any = {};
 

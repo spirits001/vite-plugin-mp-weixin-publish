@@ -20,7 +20,7 @@ const options = {
   type: '', // 非必填，项目的类型，有效值 miniProgram/miniProgramPlugin/miniGame/miniGamePlugin
   ignores: [], // 非必填，指定需要排除的规则，默认值：['node_modules/**/*']
   desc: '', // 非必填，版本说明
-  setting: {}, // 非必填，项目配置，会覆盖project.config.json中的配置
+  setting: {}, // 非必填，项目配置，会覆盖project.config.json中的配置,具体内容：https://developers.weixin.qq.com/miniprogram/dev/devtools/ci.html#%E7%BC%96%E8%AF%91%E8%AE%BE%E7%BD%AE
 };
 ```
 

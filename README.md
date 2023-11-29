@@ -33,7 +33,7 @@ import { defineConfig } from 'vite'
 import vitePluginMpWeixinPublish from 'vite-plugin-mp-weixin-publish'
 
 const options = {
-    appid: '<Your Appid>'
+    appid: '<Your Appid>',
     privateKeyPath: '<Your PrivateKey Path>',
     version: '<Your Version>'
 }

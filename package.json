@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-mp-weixin-publish",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "打包后自动发布微信小程序的vite插件",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -30,7 +30,7 @@
   "bugs": {
     "url": "https://github.com/spirits001/vite-plugin-mp-weixin-publish/issues"
   },
-  "homepage": "https://github.com/spirits001/vite-plugin-mp-weixin-publish#readme",
+  "homepage": "https://aqicms.com/article/vite-plugin-mp-weixi.html",
   "dependencies": {
     "miniprogram-ci": "^1.9.8",
     "vite": "^4.0.3"

@@ -51,3 +51,56 @@ export default defineConfig({
 ```
 
 最后build的时候，将自动上传代码到微信小程序
+
+## uni-app中使用方法
+
+1，在根目录下创建文件`vite.config.mp-weixin.ts`，内容如下：
+
+```javascript
+import { mergeConfig } from "vite";
+import baseConfig from "./vite.config";
+import vitePluginMpWeixinPublish from "vite-plugin-mp-weixin-publish";
+import { Options } from "vite-plugin-mp-weixin-publish";
+
+const options: Options = {
+  appid: '<Your Appid>',
+    privateKeyPath: '<Your PrivateKey Path>',
+    version: '<Your Version>',
+  desc:  '<Your Desc>',
+  setting: {
+    minifyJS: true,
+    minifyWXML: true,
+    minifyWXSS: true,
+    minify: true,
+  },
+};
+
+export default mergeConfig(
+  {
+    plugins: [vitePluginMpWeixinPublish(options)],
+  },
+  baseConfig
+);
+```
+
+2，在`package.json`中修改命令
+
+```json
+{
+  "scripts": {
+    "build:mp-weixin": "uni build -p mp-weixin --config ./vite.config.mp-weixin.ts",
+  }
+}
+```
+
+3，执行命令
+
+```bash
+npm run build:mp-weixin
+```
+
+### 注意事项
+
+仅限于uni-app项目采用vue/cli方式创建的情况。
+传送门：[uni-app官方文档](https://uniapp.dcloud.net.cn/quickstart-cli.html)
+如何获得上传密钥请看传送门：[微信小程序官方文档](https://developers.weixin.qq.com/miniprogram/dev/devtools/ci.html#%E5%AF%86%E9%92%A5%E5%8F%8A-IP-%E7%99%BD%E5%90%8D%E5%8D%95%E9%85%8D%E7%BD%AE)

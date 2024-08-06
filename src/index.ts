@@ -19,6 +19,7 @@ export interface Options {
   ignores?: string[];
   desc?: string;
   setting?: Setting;
+  robot?: number;
 }
 
 interface PluginRes {
@@ -58,6 +59,7 @@ export default function vitePluginMpWeixinPublish(options: Options): PluginRes |
           project,
           version: options.version,
           onProgressUpdate: console.log,
+          robot: options.robot||15,
         };
         if (options.desc) uploadData.desc = options.desc;
         if (options.setting) uploadData.setting = options.setting;
